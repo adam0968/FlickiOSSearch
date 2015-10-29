@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Networking.h"
 #import "FlickrTableViewCell.h"
+#import "FullImageViewController.h"
 
 @interface ViewController : UIViewController<UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 {

@@ -34,6 +34,26 @@
     
 }
 
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 40)];
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.tintColor = [UIColor whiteColor];
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                           [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneEditing:)],
+                           nil];
+    [numberToolbar sizeToFit];
+
+    self.searchBar.inputAccessoryView = numberToolbar;
+}
+
+-(void)doneEditing:(id)sender {
+    [self.view endEditing:YES];
+}
+
 -(void)loadData {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         NSDictionary* dictionary = [[Networking sharedManager]getFlickrSearchResultsForText:self.searchBar.text];
@@ -47,7 +67,12 @@
 
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    [self loadData];
+    if ([searchText isEqualToString:@""]) {
+        
+    } else {
+        [self loadData];
+    }
+    
 }
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -80,6 +105,16 @@
     return 195;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showFullImage" sender:arrayOfPhotos[indexPath.row]];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showFullImage"]) {
+        FullImageViewController* fivc = (FullImageViewController*)segue.destinationViewController;
+        fivc.photoInfo = (NSDictionary*)sender;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
