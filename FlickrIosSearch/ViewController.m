@@ -18,20 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
-//   NSDictionary* dictionary = [[Networking sharedManager]getFlickrSearchResultsForText:@"Adam"];
-//
-//    
-//    NSArray* arrayOfImages = [[dictionary objectForKey:@"photos"] objectForKey:@"photo"];
-//    
-//    UIImageView* iv = [[UIImageView alloc]initWithFrame:self.view.bounds];
-//    iv.image = [UIImage imageWithData:[
-//                                       [Networking sharedManager]
-//                                       getFlickrPhoto:arrayOfImages[0]andPhotoSize:@"t"]
-//                ];
-//    iv.contentMode = UIViewContentModeCenter;
-//    [self.view addSubview:iv];
-    
 }
 
 
