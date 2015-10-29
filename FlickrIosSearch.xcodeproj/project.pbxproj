@@ -14,6 +14,8 @@
 		6768E64A1BE191E4003AD709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6768E6491BE191E4003AD709 /* Assets.xcassets */; };
 		6768E64D1BE191E4003AD709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6768E64B1BE191E4003AD709 /* LaunchScreen.storyboard */; };
 		6768E6561BE19283003AD709 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6768E6551BE19283003AD709 /* Networking.m */; settings = {ASSET_TAGS = (); }; };
+		6768E65D1BE19E06003AD709 /* FlickrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6768E65B1BE19E06003AD709 /* FlickrTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		6768E65E1BE19E06003AD709 /* FlickrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6768E65C1BE19E06003AD709 /* FlickrTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		6768E64E1BE191E4003AD709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6768E6541BE19283003AD709 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		6768E6551BE19283003AD709 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		6768E65A1BE19E06003AD709 /* FlickrTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrTableViewCell.h; sourceTree = "<group>"; };
+		6768E65B1BE19E06003AD709 /* FlickrTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrTableViewCell.m; sourceTree = "<group>"; };
+		6768E65C1BE19E06003AD709 /* FlickrTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,9 @@
 				6768E63D1BE191E4003AD709 /* Supporting Files */,
 				6768E6541BE19283003AD709 /* Networking.h */,
 				6768E6551BE19283003AD709 /* Networking.m */,
+				6768E65A1BE19E06003AD709 /* FlickrTableViewCell.h */,
+				6768E65B1BE19E06003AD709 /* FlickrTableViewCell.m */,
+				6768E65C1BE19E06003AD709 /* FlickrTableViewCell.xib */,
 			);
 			path = FlickrIosSearch;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 			files = (
 				6768E64D1BE191E4003AD709 /* LaunchScreen.storyboard in Resources */,
 				6768E64A1BE191E4003AD709 /* Assets.xcassets in Resources */,
+				6768E65E1BE19E06003AD709 /* FlickrTableViewCell.xib in Resources */,
 				6768E6481BE191E4003AD709 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +165,7 @@
 			files = (
 				6768E6451BE191E4003AD709 /* ViewController.m in Sources */,
 				6768E6421BE191E4003AD709 /* AppDelegate.m in Sources */,
+				6768E65D1BE19E06003AD709 /* FlickrTableViewCell.m in Sources */,
 				6768E63F1BE191E4003AD709 /* main.m in Sources */,
 				6768E6561BE19283003AD709 /* Networking.m in Sources */,
 			);

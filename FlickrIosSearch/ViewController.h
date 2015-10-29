@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Networking.h"
+#import "FlickrTableViewCell.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
+{
+    NSArray* arrayOfPhotos;
+}
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 

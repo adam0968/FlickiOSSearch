@@ -31,7 +31,7 @@
 
 
 -(NSDictionary*)getFlickrSearchResultsForText:(NSString*)searchString {
-    NSString *urlString = [NSString stringWithFormat: @"https://api.flickr.com/services/rest/?method=flickr.photos.search&text=%@&api_key=%@&format=json&nojsoncallback=?", searchString,flickrAPIKey];
+    NSString *urlString = [NSString stringWithFormat: @"https://api.flickr.com/services/rest/?method=flickr.photos.search&text=%@&api_key=%@&format=json&nojsoncallback=?&per_page=25", searchString,flickrAPIKey];
     
     NSURL *url = [NSURL URLWithString:urlString];
     
